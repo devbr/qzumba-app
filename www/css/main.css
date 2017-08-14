@@ -1,0 +1,221 @@
+
+body {background:#222; background-size:cover; font-family: "Open Sans", sans-serif; min-width: 370px; color:#CCC;}
+*{ font-size: 1.2em; font-weight:100; color:#CCC;}
+
+b{font-weight:800;}
+
+h1{font-size: 6.8em; margin:0; padding:0 0 40px 0; text-shadow: 0 1px 5px #000;}
+h1 b{color:#F80;}
+h2{font-size: 2.3em; margin:0 0 10px 0; padding:0;}
+h2 b {color:#890;}
+h3 {font-size: 1.3em;}
+h1, h2, h3, h4, h5, h6 {color:#CC9;}
+h4 {font-size: 1.6em; font-weight:700;}
+
+a{display:inline-block; text-decoration:none; color:#99F;}
+a:hover{}
+
+button{clear: both; display: inline-block; padding:10px 20px;
+    margin:0; cursor:pointer; background:#3333; background-image: linear-gradient(to top, #555, #666); color:#FFF;
+    border:1px solid #333; border-radius: 6px;}
+button:hover {background-image: linear-gradient(to top, #444, #555); box-shadow: 0 2px 2px #555;}
+
+input[type=text],
+input[type=password],
+input[type=url]{ margin:0 0 10px 0; border:none; background:#333; padding:12px 3%; width:94%; color:#FFF;
+                z-index:1000; font-weight:100; font-family:helvetica,sans-serif; box-shadow: 0 3px 10px #000 inset;}
+input[type=checkbox],
+input[type=radio]{float:left; margin:2px 5px 0 0;}
+
+label{color:#B80; padding:0; display:inline; margin:5px 0 0 0;}
+hr{ margin:20px 0 10px 0;}
+
+button,
+input {border-radius:10px;}
+
+.inline {display:block; margin-top: 10px;}
+.inline * {display: inline-block; }
+.inline label {width: 65px;}
+.inline label:first-child {width: 100px;}
+
+.controll {margin:10px 0 0 0; padding: 10px 0;}
+
+.logo {width:98%; margin:20px auto;}
+
+
+/* MENU */
+
+#menu {position:fixed; top:-12px; left:0px; width: 600px; z-index:3000;}
+#menu div {
+    transition: .3s;
+    transform: skew(12deg);
+    -webkit-transform: skew(12deg);
+    display:inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    font-style: italic;
+    background: #333;
+    color:#BBB;
+    padding: 20px 20px 12px 20px;
+    margin: 0 -5px 0 0 ;
+    box-shadow: 0 0 10px #000;
+    opacity: .9;
+    cursor: pointer;
+    border: none;
+    border-bottom-left-radius: 6px ;
+    border-bottom-right-radius: 6px;
+    z-index: 2;
+    cursor:pointer;
+}
+#menu div:hover, #menu div.active {
+    transition: .1s;
+    background: #B80;
+    color: #FFF;
+    opacity: 1;
+    transform: translate(0px,12px) scale(1.2,1.2)  skew(12deg);
+    -webkit-transform: translate(0px,12px) scale(1.2,1.2)  skew(12deg);
+    box-shadow: 0 0 30px #000;
+}
+#menu div:hover {transform: translate(0px,6px) scale(1.2,1.2)  skew(12deg);
+                -webkit-transform: translate(0px,6px) scale(1.2,1.2)  skew(12deg);}
+#menu div:active {opacity: .5;}
+#menu div span {display: none;}
+#menu div.active span {
+    transition: 1s;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 13px;
+    height: 13px;
+    background: #B80;
+    top: 41px;
+    display: block;
+    position: absolute;
+}
+
+/* WAIT */
+.wait{position:fixed; top:0; left:0; bottom:0; left:0; right:0; background:#FFF; font-weight: 100; font-size: 1.3em; z-index: 5000; transition: 1s;}
+.wait div{position:fixed; top:45%; bottom:50%; width:100%; color:#890; text-align:center;}
+.wait.off {opacity:0;  }
+
+/* CONTAINER */
+#container,
+#xcontainer {display: none; position:absolute; top:0; left:0; right: 0; bottom: 0; overflow: auto; transition: scroll 2s; overflow-x: hidden;}
+
+/* PAGE */
+.page{position:absolute; top:-1500px; transition:.4s; width: 92%; min-width:290px; max-width: 400px;
+    margin:2%; padding:50px 2% 10px 2%; z-index:2000; opacity:0; transform:scale(0,0) translate(0,-900px);
+    -webkit-transform:scale(0,0) translate(0,-900px);left:-100%;}
+    .page ul{margin:0; padding: 0; list-style: none;}
+        .page li{margin:0; padding: 3px 0; list-style: none;clear:both;}
+            .page li img {float:left; margin:2px 8px 0 0; width:22px!important;
+                box-shadow: 1px 0 1px #CCD; border-radius:50%; opacity: .7;}
+
+.In {transform:scale(1,1) translate(0,0); -webkit-transform:scale(1,1) translate(0,0); left:0; top:0; opacity: 1;}
+
+
+/* SELECTOR */
+.kzaSelector {width: 100%; margin:5px 0; border:1px solid #333; box-shadow: 3px 0 3px #222; cursor: pointer;}
+    .kzaSelector
+        td {font-size: 1.3em; color:#FFF; padding: 0 3%; width: 50%; text-align: right; background:#333; border-bottom: 1px solid #333;}
+    .kzaSelector
+        td:first-child {color:#B80; font-size: 1em; text-align: left; width: 35%;}
+    .kzaSelector
+        td:last-child{color:#333; font-size: 2em; width: 16%; padding: 0 0; text-align: center; background: #444;}
+    .kzaSelector
+        tr:hover
+            td:last-child {color:#0F0;}
+
+
+/* FOOTER */
+.loginFooter{clear: both; font-weight:bold; color:#CC9; margin:30px 0 0 0; padding:20px 5px;
+    border-top:1px solid #666; text-shadow: 1px 1px 1px #000;}
+    .loginFooter i{font-size: .9em; display: block; color:#888;}
+    .loginFooter b{color:#F80;}
+
+#logerror{display:none; font-weight:normal; color:#000; padding:10px; background:#F90; border-radius:6px;}
+
+/* HELP */
+#help li {list-style: circle;}
+
+/* SEND */
+#send {position:fixed; width:96%; max-width: 400px; z-index: 2999; top: -300px; left:0; opacity: 0;transform:rotate3d(0,0,0,90deg); -webkit-transform:rotate3d(0,0,0,90deg); box-shadow: 0 10px 40px #222;background:#444;}
+#send.In { padding-top: 20px; top: 35px; left:0;  opacity: 1;}
+#send #sendnotice {color:#FC0;}
+
+
+/* FILES */
+#files {width:100%; height: 43px !important; opacity: .5; margin:0; cursor: pointer; }
+
+#fileList {margin:30px 0 0 0}
+#fileList td{border-bottom: 1px solid #333;}
+#fileList td:last-child, #fileList th:last-child {text-align: right;}
+#btSendFile {display:none}
+
+/* USERS */
+#users {padding-bottom: 70px;}
+#users li {font-size: 1.3em;}
+
+/* CONFIG */
+#config {}
+
+/* CHAT */
+#chat{padding: 40px 5px 0 5px; z-index:1; background:transparent !important; box-shadow: none;}
+
+    #chat .xmsgc {margin:20px 0;}
+
+    #chat h2{display:block; font-size:1.1em; font-weight:300; padding:0; color:#FC9; margin:-8px 0 0 0; border:none;}
+    #chat .xmsg span{display:block; font-size:.7em; color:#AAA; margin:2px 0 -5px 0; padding:0; text-align:right;}
+    #chat .xmsgc img{float:left; margin:0 8px 0 0; width:36px!important; box-shadow: 1px 0 1px #222;
+            border-radius:50%; opacity: .7;}
+
+    #chat .xmsg {z-index: 1000; background:#CDE; color:#000; border-radius:8px; margin:10px 0 0 35px; padding: 8px; word-break:break-word;}
+    #chat .xmsg * {color: #000 !important;}
+    #chat .xmsg b{font-weight: bold;}
+    #chat .xmsgi{
+        transition: 1s;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 13px;
+        height: 13px;
+        background: #CDE;
+        margin: 4px 0 0 55px !important;
+        display: block;
+        position: absolute;
+        z-index: 999;
+    }
+
+    #chat .me .xmsg {background:#CAA; margin:20px 10px 0 0;}
+    #chat .me .xmsgi{background:#CAA; margin:15px 0 0 0 !important; right: 8px;}
+
+    #chat .file .xmsg {background:#AA8;}
+    #chat .file .xmsg a {color:#09F !important; font-weight: bold;}
+    #chat .file .xmsgi{background:#AA8;}
+
+/* MESSAGES */
+#chat .system,
+#chat .error{clear:both; padding:5px; font-size:1em; font-style:italic; font-weight:100;
+      background:transparent; min-height:0; box-shadow:none; color:#F99; border:0;}
+#chat .system{color:#F60;}
+#chat .market {color:#999; padding:8px; font-size: .8em;}
+#chat .market * {color:#999; font-style: italic; font-size: .8em;}
+#chat .market h2 {color:#DDD; font-size: 1.1em !important;}
+#chat .market a {color:#9DF; font-size:1em; max-width: 100%;}
+#chat .market img{max-width: 100%;}
+
+#chat .openmsg {background:#400; padding:13px; margin:10px 20px; border-radius:8px; border:1px solid #600; box-shadow: 2px 3px #000 inset;}
+#chat .openmsg, #chat .openmsg * { font-style:italic; font-weight:100; font-size: .9em; color:#EEE; }
+#chat .openmsg h2 {color:#FFF; font-size: 1.1em; font-weight: bold;}
+
+#message{margin:0 -7px 0 0; padding:5px 2%; color:#036; width: 96%; height: 50px; border-radius:0; border:1px solid #DDD; font-size: 1em; font-family:"Trebuchet MS",Optima,Arial,Helvetica,sans-serif;}
+
+/* MEDIA QUERY */
+@media only screen and (max-width:400px){
+    html {font-size:90%}
+    h1{font-size: 5.4em}
+    h2{font-size: 2em;}
+}
+
+@media only screen and (max-width:300px){
+    html {font-size:75%}
+}
+

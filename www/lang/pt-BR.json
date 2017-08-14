@@ -1,0 +1,10 @@
+{
+    "scr": "Sistema de Bate-papo Seguro",
+    "start": "iniciar",
+    "help": "Ajuda",
+    "name": "Nome",
+    "channel": "Canal",
+    "key" : "Chave",
+    "config" : "Configurar",
+    "panic" : "Panico"
+}
